@@ -1,7 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./components/App";
-import Table from "./components/Table/Table";
-// import '../public/css/index.css';
+import ViewTable from "./components/templates/ViewTable/ViewTable";
 
-ReactDOM.render(<Table />, document.getElementById("root"));
+ReactDOM.render(<ViewTable />, document.getElementById("root"));

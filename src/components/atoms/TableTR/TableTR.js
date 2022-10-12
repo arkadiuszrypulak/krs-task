@@ -6,7 +6,7 @@ const TableTR = (props) => {
       <td>{props.item.Name}</td>
       <td>{props.item.NIP}</td>
       <td>{props.item.Value}</td>
-      <td>{props.item.Date}</td>
+      <td>{props.item.date}</td>
     </tr>
   );
 };
