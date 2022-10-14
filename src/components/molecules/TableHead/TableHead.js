@@ -1,14 +1,27 @@
 import React from "react";
-import useFetch from "../../hooks/useFetch";
+import "../../../../public/assets/less/table.less";
 
-const TableHead = ({ children }) => {
+const TableHead = ({ isUpSorted, sortChangeHandler }) => {
   return (
-    <thead>
-      <tr>
-        {children}
-        <th>NIP</th>
-        <th>Kwota Zadluzenia</th>
-        <th>Data powstania zobowiazania</th>
+    <thead className="table__head">
+      <tr className="table__row">
+        <th className="table__header">
+          {isUpSorted && (
+            <a onClick={sortChangeHandler} href="#">
+              Dluznik
+              <i className="fas fa-caret-down"></i>
+            </a>
+          )}{" "}
+          {!isUpSorted && (
+            <a onClick={sortChangeHandler} href="#">
+              Dluznik
+              <i className="fas fa-caret-up"></i>
+            </a>
+          )}
+        </th>
+        <th className="table__header">NIP</th>
+        <th className="table__header">Kwota Zadluzenia</th>
+        <th className="table__header">Data powstania zobowiazania</th>
       </tr>
     </thead>
   );

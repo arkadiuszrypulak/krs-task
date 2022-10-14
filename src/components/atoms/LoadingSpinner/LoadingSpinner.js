@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../../assets/less/spinner.less";
+import "../../../../public/assets/less/spinner.less";
 
 const LoadingSpinner = () => {
   return (

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 const useFetch = (url) => {
+  //Data fetching
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -54,7 +55,13 @@ const useFetch = (url) => {
     }
   };
 
-  return { data, loading, error, isUpSorted, sortChangeHandler };
+  return {
+    data,
+    loading,
+    error,
+    isUpSorted,
+    sortChangeHandler,
+  };
 };
 
 export default useFetch;

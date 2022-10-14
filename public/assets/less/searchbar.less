@@ -1,0 +1,82 @@
+@import "index.less";
+@import "mixins.less";
+@import "colors.less";
+@import "fonts.less";
+@import "media-wide.less";
+
+.searchbar {
+  background-color: @basic-background-color;
+  width: 100%;
+
+  .searchbar__container {
+    .flex(center, flex-start);
+    flex-direction: @direction-column;
+    padding: 5% 0;
+    max-width: @full-wide;
+    margin: @centered-margin;
+
+    .searchbar__header {
+      color: @basic-white;
+      font-weight: bold;
+      display: block;
+      margin: 0 auto 15px auto;
+    }
+
+    .searchbar__label {
+      color: @basic-white;
+      .flex(center, stretch);
+      width: 100%;
+
+      .searchbar__input {
+        border: none;
+        height: 50px;
+        outline: none;
+        font-size: @biggest-font-size;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+      .searchbar__search-input {
+        color: #000;
+        width: 250px;
+      }
+
+      .searchbar__submit-input {
+        background-color: @btn-color;
+        width: 100px;
+      }
+    }
+  }
+}
+
+@media (min-width: 920px) {
+  .searchbar {
+    .searchbar__container {
+      .searchbar__header {
+        margin: 0 auto 15px 15%;
+      }
+      .searchbar__label {
+        justify-content: flex-start;
+        margin-left: 15%;
+        .searchbar__search-input {
+          width: 350px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .searchbar {
+    .searchbar__container {
+      .searchbar__header {
+        margin-left: 15%;
+      }
+      .searchbar__label {
+        margin-left: 15%;
+        .searchbar__search-input {
+          width: 450px;
+        }
+      }
+    }
+  }
+}

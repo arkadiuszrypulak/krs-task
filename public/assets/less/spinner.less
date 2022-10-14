@@ -1,0 +1,26 @@
+@import "mixins.less";
+@import "colors.less";
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+}
+
+.loading-spinner {
+  .spinner-size(50px, 50px);
+  border: 10px solid @light-spinner-color;
+  border-top: 10px solid @dark-spinner-color;
+  border-radius: 50%;
+  animation: spinner 1.5s linear infinite;
+}

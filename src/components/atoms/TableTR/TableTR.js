@@ -1,12 +1,13 @@
 import React from "react";
+import '../../../../public/assets/less/table.less';
 
 const TableTR = (props) => {
   return (
-    <tr>
-      <td>{props.item.Name}</td>
-      <td>{props.item.NIP}</td>
-      <td>{props.item.Value}</td>
-      <td>{props.item.date}</td>
+    <tr className="table__row">
+      <td className="table__row-single">{props.item.Name}</td>
+      <td className="table__row-single">{props.item.NIP}</td>
+      <td className="table__row-single">{props.item.Value}</td>
+      <td className="table__row-single">{props.item.date}</td>
     </tr>
   );
 };

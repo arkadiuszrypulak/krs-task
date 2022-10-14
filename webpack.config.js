@@ -13,7 +13,7 @@ module.exports = {
         options: { presets: ["@babel/env"] },
       },
       {
-        test: /\.less$/,
+        test: /\.(less|css)$/,
         use: ["style-loader", "css-loader", "less-loader"],
       },
     ],

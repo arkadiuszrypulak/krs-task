@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.table__body {
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #fff;
+  overflow: hidden;
+}
+.table__body .table__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1440px;
+  padding: 10px 15px;
+  border-bottom: 1px solid #cacaca;
+}
+.table__body .table__row .table__row-single {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  font-weight: bold;
+  margin-left: 10px;
+}

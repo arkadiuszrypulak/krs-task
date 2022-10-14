@@ -1,0 +1,117 @@
+@import "index.less";
+@import "mixins.less";
+@import "colors.less";
+@import "fonts.less";
+@import "media-wide.less";
+
+.table {
+  .flex(center, center);
+  flex-direction: @direction-column;
+  max-width: @full-wide;
+  margin: @centered-margin;
+
+  .table__head {
+    color: @header-color;
+    text-transform: uppercase;
+    border-bottom: 1px solid @header-color;
+
+    .table__row {
+      .flex(space-around, center);
+      padding: 10px 0;
+      font-size: @small-font-size;
+
+      .table__header {
+        display: flex;
+        justify-self: flex-start;
+        width: 100%;
+        margin-left: 20px;
+
+        i {
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+
+  .table__body {
+    color: @basic-text-color;
+    text-transform: uppercase;
+
+    .table__row {
+      .flex(space-between, center);
+      font-size: @small-font-size;
+      padding: 10px;
+      border-bottom: 1px solid @header-color;
+
+      .table__row-single {
+        .flex(center, stretch);
+        width: 100%;
+        font-weight: bold;
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+@media (min-width: 650px) {
+  .table {
+    .table__head {
+      .table__row {
+        font-size: @medium-font-size;
+        width: @xsmall-wide;
+      }
+    }
+
+    .table__body {
+      .table__row {
+        font-size: @medium-font-size;
+      }
+    }
+  }
+}
+
+@media (min-width: 750px) {
+  .table {
+    .table__head {
+      .table__row {
+        font-size: @medium-font-size;
+        width: @small-wide;
+      }
+    }
+
+    .table__body {
+      .table__row {
+        font-size: @normal-font-size;
+        width: @small-wide;
+
+        .table__row-single {
+          justify-content: flex-start;
+
+          &:last-child {
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1092px) {
+  .table {
+    .table__head {
+      .table__row {
+        font-size: @medium-font-size;
+        width: @medium-wide;
+      }
+    }
+
+    .table__body {
+      .table__row {
+        font-size: @big-font-size;
+        padding: 15px 0;
+
+        width: @medium-wide;
+      }
+    }
+  }
+}
